@@ -267,7 +267,7 @@ var books = map[int]*Book{}
 
 func initDB() {
 	var err error
-	dsn := "root:@tcp(127.0.0.1:3306)/perpustakaan?parseTime=true&loc=Local&time_zone=%27%2B07%3A00%27"
+	dsn := "appuser:app123@tcp(127.0.0.1:3306)/perpustakaan?charset=utf8mb4&parseTime=True&loc=Local"
 	db, err = sql.Open("mysql", dsn)
 	if err != nil {
 		log.Fatal(err)
